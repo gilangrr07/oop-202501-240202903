@@ -204,7 +204,7 @@ public class MainPolymorphism {
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/HasilPolymorphism.png)
+![Screenshot hasil](HasilPolymorphism.png)
 )
 ---
 
