@@ -166,13 +166,13 @@ public class MainPolymorphism {
 
 ## Quiz
 1. Apa perbedaan overloading dan overriding?  
-   **Jawaban:** …  
+   **Jawaban:Overloading adalah kondisi ketika dua atau lebih metode memiliki nama yang sama tetapi berbeda parameter (jumlah atau tipe datanya), dan biasanya terjadi dalam satu kelas yang sama. Sedangkan overriding adalah kondisi ketika kelas turunan menimpa (mengganti) metode dari kelas induk dengan nama, parameter, dan tipe kembalian yang sama, untuk memberikan perilaku yang lebih spesifik pada subclass.**
 
 2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?  
-   **Jawaban:** …  
+   **Jawaban:Java menentukan metode yang dipanggil dalam dynamic binding berdasarkan tipe objek sebenarnya saat program dijalankan (runtime), bukan berdasarkan tipe referensinya saat dikompilasi. Artinya, jika referensi bertipe Produk tetapi objeknya adalah Pupuk, maka yang dijalankan adalah metode getInfo() milik kelas Pupuk.** 
 
 3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.  
-   **Jawaban:** …  
+   **Jawaban:Contoh kasus polymorphism dalam sistem POS adalah pada sistem pembayaran. Misalnya terdapat kelas induk Pembayaran dengan metode prosesPembayaran(), lalu ada subclass PembayaranTunai, PembayaranKartu, dan PembayaranQRIS yang masing-masing mengimplementasikan metode tersebut dengan cara berbeda. Saat program memanggil prosesPembayaran() melalui referensi bertipe Pembayaran, Java akan menjalankan versi metode yang sesuai dengan jenis pembayaran yang sebenarnya digunakan.** 
 
 ---
 
