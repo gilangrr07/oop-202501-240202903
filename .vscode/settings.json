@@ -1,3 +1,8 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "praktikum/week9-exception-handling/src/main/java/com/upb/agripos",
+        "praktikum/week10-pattern-testing/src/test/java",
+        "praktikum/week1-setup-hello-pos/src/main/java/com/upb/agripos"
+    ]
 }
