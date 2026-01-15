@@ -1,5 +1,5 @@
-# Laporan Praktikum Minggu 10
-Topik: Design Pattern (Singleton, MVC) dan Unit Testing menggunakan JUnit
+# Laporan Praktikum Minggu 11
+Topik: Data Access Object (DAO) dan CRUD Database dengan JDBC
 
 ## Identitas
 - Nama  : [Mohamad Gilang Rizki Riomdona]
@@ -14,64 +14,36 @@ Topik: Design Pattern (Singleton, MVC) dan Unit Testing menggunakan JUnit
 
 Setelah mengikuti praktikum ini, mahasiswa mampu:
 
-1. Menjelaskan konsep dasar design pattern dalam rekayasa perangkat lunak.
-2. Mengimplementasikan Singleton Pattern dengan benar.
-3. Menjelaskan dan menerapkan Model–View–Controller (MVC) pada aplikasi sederhana.
-4. Membuat dan menjalankan unit test menggunakan JUnit.
-5. Menganalisis manfaat penerapan design pattern dan unit testing terhadap kualitas perangkat lunak.)
+1. Menjelaskan konsep Data Access Object (DAO) dalam pengembangan aplikasi OOP.
+2. Menghubungkan aplikasi Java dengan basis data menggunakan JDBC.
+3. Mengimplementasikan operasi CRUD (Create, Read, Update, Delete) secara lengkap.
+4. Mengintegrasikan DAO dengan class aplikasi OOP sesuai prinsip desain yang baik.
 
+)
 ---
 
 ## Dasar Teori
 (
-### 1. Design Pattern
+### 1. Konsep Data Access Object (DAO)
 
-Design pattern adalah solusi desain yang telah teruji untuk menyelesaikan masalah umum dalam pengembangan perangkat lunak. Fokus minggu ini:
-- Singleton Pattern
-- MVC (Model–View–Controller)
+DAO adalah pola desain yang memisahkan logika akses data dari logika bisnis aplikasi. Dengan DAO, perubahan teknologi basis data tidak memengaruhi logika utama aplikasi.
 
-### 2. Singleton Pattern
+Manfaat DAO:
+- Kode lebih terstruktur dan mudah dipelihara
+- Mengurangi tight coupling antara aplikasi dan database
+- Mendukung pengujian dan pengembangan lanjutan
 
-Tujuan: Menjamin suatu class hanya memiliki satu instance dan menyediakan titik akses global.
+---
 
-Karakteristik:
-- Constructor `private`
-- Atribut `static instance`
-- Method `static getInstance()`
+### 2. JDBC dan Koneksi Database
 
-Contoh Implementasi:
-```java
-package com.upb.agripos.config;
+JDBC (Java Database Connectivity) digunakan untuk menghubungkan aplikasi Java dengan basis data relasional, dalam praktikum ini menggunakan PostgreSQL.
 
-public class DatabaseConnection {
-    private static DatabaseConnection instance;
-    private DatabaseConnection() {}
-
-    public static DatabaseConnection getInstance() {
-        if (instance == null) {
-            instance = new DatabaseConnection();
-        }
-        return instance;
-    }
-}
-```
-
-Penerapan pada Agri-POS: koneksi database atau service global yang tidak boleh lebih dari satu instance.
-
-### 3. MVC (Model–View–Controller)
-
-Memisahkan tanggung jawab aplikasi:
-
-| Komponen | Tanggung Jawab |
-|---------|------------------|
-| Model   | Data dan logika bisnis |
-| View    | Tampilan/output |
-| Controller | Penghubung Model dan View |
-
-Contoh Struktur MVC Sederhana:
-- Model → `Product`
-- View → `ConsoleView`
-- Controller → `ProductController)
+Komponen utama JDBC:
+- DriverManager
+- Connection
+- PreparedStatement
+- ResultSet
 
 ---
 
@@ -79,14 +51,15 @@ Contoh Struktur MVC Sederhana:
 (
 ## Langkah Praktikum Pertemuan 10
 
-1. Implementasikan Singleton untuk `DatabaseConnection`.
-2. Buat struktur MVC sederhana untuk fitur Product.
-3. Buat minimal 1 unit test JUnit.
-4. Jalankan unit test dan dokumentasikan hasilnya.
+1. Basis Data Gunakan PostgreSQL.
+2. Class Model – Product
+3. Interface DAO
+4. Implementasi DAO dengan JDBC.
+5. Integrasi DAO dengan Aplikasi
 
 Commit message:
 ```
-week10-pattern-testing: [fitur] [deskripsi singkat]
+week11-dao-database: [fitur] [deskripsi singkat]
 ```
 
 )
